@@ -403,15 +403,15 @@
 
   .typing-1 {
     animation:
-      typingGrow1 1s steps(11, end) forwards,
-      cursorHold1 1.06s step-end forwards;
+      typingLine1 1s steps(11, end) forwards,
+      cursorLine1 1.06s step-end forwards;
   }
 
   .typing-2 {
     animation:
-      showLine2 0s linear 1.02s forwards,
-      typingGrow2 1.2s steps(17, end) 1.02s forwards,
-      blinkCursorStop 2.6s step-end 2.22s forwards;
+      revealLine2 0s linear 1.02s forwards,
+      typingLine2 1.2s steps(17, end) 1.02s forwards,
+      blinkCursor2 .75s step-end 2.22s infinite;
   }
 
   aside p {
