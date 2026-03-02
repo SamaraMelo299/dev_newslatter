@@ -1,53 +1,219 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/fonts.css" />
-    <link rel="stylesheet" href="styles/media.css" />
-    <title>Lading Page</title>
-  </head>
-  <body>
-    <header>
-      <div id="title">
-        <h1>Marketing</h1>
-        <h1>Creativo</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/fonts.css" />
+  <link rel="stylesheet" href="styles/media.css" />
+
+  <link rel="icon" type="image/svg+xml" href="image/favicon.svg">
+
+  <meta name="description"
+    content="Dev Newsletter: conteúdo prático sobre JavaScript, Node.js, APIs REST e carreira." />
+  <meta name="theme-color" content="#840ec9" />
+
+  <title>Dev Newsletter | Landing Page</title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div id="title" aria-label="Dev Newsletter">
+        <h1>Dev</h1>
+        <h1>Newsletter</h1>
       </div>
 
-      <ul>
-        <a href="#"><li>Início</li></a>
-        <a href="#"><li>Serviços</li></a>
-        <a href="#"><li>Sobre</li></a>
-        <a href="#"><li>Contato</li></a>
-        <a href="#" id="inscreva-se-btn"><li>Já tem uma conta?</li></a>
-      </ul>
-    </header>
+      <nav id="primary-nav" class="nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#beneficios">Benefícios</a></li>
+          <li><a href="#conteudo">Conteúdo</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
 
-    <main>
+      <a class="cta" href="#inicio" id="inscreva-se-btn">Inscreva-se</a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="primary-nav">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="inicio">
+    <div class="container hero">
       <aside>
-        <h2><span>Inscreva-se agora</span></h2>
-        <h2>na Newsletter</h2>
+        <h2 class="hero-title">
+          <span class="typing-row row-1">
+            <span class="typing-text typing-1">Inscreva-se</span>
+          </span>
+        </h2>
+
+        <h2 class="hero-title second-line">
+          <span class="typing-row row-2">
+            <span class="typing-text typing-2">na Dev Newsletter</span>
+          </span>
+        </h2>
+
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid,
-          quibusdam odio aliquam ut perspiciatis distinctio ducimus neque
-          voluptatum fugiat velit ratione necessitatibus facilis aut quam dolor
-          nostrum. Nemo, animi nisi?
+          Conteúdo semanal para devs em evolução:
+          <strong>JavaScript</strong>, <strong>Node.js</strong>,
+          <strong>APIs REST</strong>, boas práticas e dicas de carreira — curto,
+          direto e aplicável em projetos reais.
         </p>
-        <form>
-          <input type="text" placeholder="Nome" />
-          <input type="email" placeholder="E-mail" />
-          <input type="submit" value="Enviar" id="btn-enviar" />
+
+        <form id="newsletter-form" novalidate>
+          <input id="newsletter-name" type="text" placeholder="Seu nome" autocomplete="name" />
+          <input id="newsletter-email" type="email" placeholder="Seu melhor e-mail" autocomplete="email" />
+          <input type="submit" value="Quero receber" id="btn-enviar" />
+          <p id="newsletter-status" aria-live="polite"></p>
         </form>
       </aside>
 
       <article>
-        <img src="image/img.png" alt="woman" />
+        <div class="hero-image">
+          <img src="image/dev_girl.png" alt="Ilustração de pessoa estudando" />
+        </div>
       </article>
-    </main>
-    <footer>
-      Desenvolvido por
-      <a href="https://github.com/SamaraMelo299" target="_blank">Samara Melo</a>
-    </footer>
-  </body>
+    </div>
+  </main>
+
+  <!-- BENEFÍCIOS -->
+  <section id="beneficios" class="section">
+    <div class="container">
+      <header class="section-head">
+        <h2>Benefícios</h2>
+        <p>O que você leva para o seu dia a dia como dev:</p>
+      </header>
+
+      <ul class="cards">
+        <li class="card"><strong>Aprendizado prático:</strong> exemplos e referências aplicáveis.</li>
+        <li class="card"><strong>Portfólio melhor:</strong> ideias de projetos e melhorias incrementais.</li>
+        <li class="card"><strong>Back-end estruturado:</strong> APIs REST organizadas seguindo boas práticas.</li>
+        <li class="card"><strong>Carreira:</strong> dicas para entrevistas, LinkedIn e currículo.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTEÚDO -->
+  <section id="conteudo" class="section">
+    <div class="container">
+      <header class="section-head">
+        <h2>Conteúdo</h2>
+        <p>Uma curadoria objetiva com temas frequentes:</p>
+      </header>
+
+      <ul class="cards">
+        <li class="card"><strong>JavaScript:</strong> DOM, fetch, async/await e boas práticas.</li>
+        <li class="card"><strong>Node.js:</strong> Express, validação e padrões.</li>
+        <li class="card"><strong>APIs:</strong> REST, erros, autenticação e status codes.</li>
+        <li class="card"><strong>Projetos:</strong> checklist de melhorias e ideias fullstack.</li>
+      </ul>
+
+      <p class="cta-inline">
+        Quer receber o próximo envio?
+        <a href="#inicio"><strong>Inscreva-se aqui</strong></a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <header class="section-head">
+        <h2>FAQ</h2>
+        <p>Dúvidas comuns antes de se inscrever:</p>
+      </header>
+
+      <div class="faq">
+        <button class="faq-item" type="button" aria-expanded="false">
+          <span><strong>Com que frequência você envia?</strong></span>
+          <span aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Uma vez por semana, com leitura rápida (3–5 minutos).</p>
+        </div>
+
+        <button class="faq-item" type="button" aria-expanded="false">
+          <span><strong>Vai ter spam?</strong></span>
+          <span aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Não. O objetivo é ser curto, útil e direto. Você pode sair quando quiser.</p>
+        </div>
+
+        <button class="faq-item" type="button" aria-expanded="false">
+          <span><strong>É para iniciantes?</strong></span>
+          <span aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>É pensado para quem está evoluindo: do básico ao intermediário, com prática.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section section--panel">
+    <div class="container">
+      <div class="panel">
+        <header class="section-head">
+          <h2>Sobre</h2>
+          <p>Por que este projeto existe e o que ele treina na prática:</p>
+        </header>
+
+        <p>
+          Este projeto foi criado para praticar <strong>HTML semântico</strong>,
+          <strong>CSS responsivo</strong> e <strong>JavaScript</strong> (validação
+          de formulário, navegação e accordion), simulando um fluxo real de inscrição
+          em newsletter com feedback ao usuário.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section section--panel">
+    <div class="container">
+      <div class="panel">
+        <header class="section-head">
+          <h2>Contato</h2>
+          <p>Quer trocar ideia sobre projetos ou oportunidades? Me chame:</p>
+        </header>
+
+        <div class="contact-cards">
+          <a class="contact-card" href="https://www.linkedin.com/in/samara-melo-262941187/" target="_blank"
+            rel="noopener">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">/samara-melo</span>
+          </a>
+
+          <a class="contact-card" href="https://github.com/SamaraMelo299" target="_blank" rel="noopener">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">/SamaraMelo299</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Copyright © 2026 by
+    <a href="https://github.com/SamaraMelo299" target="_blank" rel="noopener">Samara Melo</a>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+
 </html>
